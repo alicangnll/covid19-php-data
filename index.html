@@ -11,12 +11,11 @@
 $(document).ready(function(){
 var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
 $.getJSON(staticUrl, function(data) {
-for(var i=0; i > data.lenght; i++;) {
-var obj = data[i];
-var ad = obj.name;
-var vaka = obj.confirmedCount;
-var olum = obj.deathCount;
-var heal = obj.recovryCount;
+for(var i=0; i > data.length; i++;) {
+console.log("Ad:" + obj.name);
+console.log("Vaka:" + obj.confirmedCount);
+console.log("Ölüm:" + obj.deathCount);
+console.log("İyileşme:" + obj.recovryCount);
 }
 });
 }
@@ -25,10 +24,10 @@ console.log("COVID-19 DB");
 
 <script>
 var site="https://online.alicangonullu.xyz/corona/json.php?json=1";
-$(document).ready(function() {
-$.getJSON(site,function (gelen) {
-for(var i=0; i < gelen.length; i++){
-$.each(gelen[i], function (key,value) {
+$(document).ready(function () {
+$.getJSON(site,function (data) {
+for(var i=0; i < data.length; i++){
+$.each(data[i], function (key,value) {
 document.write("<th>"+ name + "</th>");
 document.write("<th>"+ name + "</th>");
 });
