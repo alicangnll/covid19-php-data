@@ -1,16 +1,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <script>
-    $.getJSON("https://corona.cbddo.gov.tr/Home/GetTotalDataWithLocationForMap",
-    function (data) {
-        var tr = data.report
-        for (var i = 0; i < data.report.length; i++) {
-            var tr = $('<tr/>');
-            tr.append("<td>" + data.report[i].name + "</td>");
-            tr.append("<td>" + data.report[i].confirmedCount + "</td>");
-            tr.append("<td>" + data.report[i].deathCount + "</td>");
-            tr.append("<td>" + data.report[i].recovryCount + "</td>");
-            $('.table1').append(tr);
+        $.ajax({
+        url: "https://corona.cbddo.gov.tr/Home/GetTotalDataWithLocationForMap",
+        type: "GET",
+        dataType: "jsonp",
+        success: function (data) {
+                var tr = data.report
+                for (var i = 0; i < data.length; i++) {
+                    tr = $('<tr/>');
+                    tr.append("<td>" + data[i].name + "</td>");
+                    tr.append("<td>" + data[i].confirmedCount + "</td>");
+                    tr.append("<td>" + data[i].deathCount + "</td>");
+                    tr.append("<td>" + data[i].recovryCount + "</td>");
+                    $('.table1').append(tr);
+                }
         }
     });
     </script>
