@@ -14,12 +14,16 @@ $.getJSON("https://corona.cbddo.gov.tr/Home/GetTotalDataWithLocationForMap").the
     }
 
 });
+   
+       $.getJSON('http://time.jsontest.com', function(data) {
+        for (var i = 0; i < data.report.length; i++) {
+        var text = `Adı: ${data[i].name}<br>
+                    Vaka: ${data[i].confirmedCount}<br>
+                    Ölüm: ${data[i].deathCount}<br>
+                    İyileşme: ${data[i].deathCount}<br>`
+        }
+     
+        $(".mypanel").html(text);
+    });
 </script>
-    <table class="table1">
-        <tr>
-            <th>Mes</th>
-            <th>Dia</th>
-            <th>Hora</th>
-            <th>Hora</th>
-        </tr>
-    </table>
+<div class="mypanel"></div>
