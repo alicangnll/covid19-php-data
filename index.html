@@ -5,11 +5,11 @@ var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
 $.getJSON(staticUrl, function(data) {
 for(var i = 0; i < data[i].length; i++) {
 var obj = data[i];
-var text = `Ad: ${obj.name}<br>
-Vaka: ${obj.confirmedCount}<br>
-Ölüm: ${obj.deathCount}<br>
-İyileşme: ${obj.recovryCount}<br>`
-$(".mypanel").html(text);
+console.log("Ad:" + obj.name);
+console.log("Vaka:" + obj.confirmedCount);
+console.log("Ölüm:" + obj.deathCount);
+console.log("İyileşme:" + obj.recovryCount);
+$(".mypanel").html(obj);
 }
 });
 }
