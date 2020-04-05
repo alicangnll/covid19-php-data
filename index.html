@@ -1,14 +1,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
        $.getJSON('https://online.alicangonullu.xyz/corona/json.php?json=1', function(data) {
-        for (var i = 0; i < $.report.length; i++) {
-        var text = `Adı: ${data[i].name}<br>
-                    Vaka: ${data[i].confirmedCount}<br>
-                    Ölüm: ${data[i].deathCount}<br>
-                    İyileşme: ${data[i].recovryCount}<br>`
-        }
+for (var i = 0; i < $.report.length; i++) {
+var text = `Adı: ${data[i].name}<br>
+Vaka: ${data[i].confirmedCount}<br>
+Ölüm: ${data[i].deathCount}<br>
+İyileşme: ${data[i].recovryCount}<br>`
+}
      
-        $(".mypanel").html(text);
-    });
+$(".mypanel").html(text);
+});
 </script>
 <div class="mypanel"></div>
