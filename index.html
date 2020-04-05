@@ -7,14 +7,11 @@
     <th>İyileşme</th>
   </tr>
   <tr>
-
-  </tr>
-</table>
 <script>
 $(document).ready(function(){
 var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
 $.getJSON(staticUrl, function(data) {
-for(var i in data) {
+for(var i=0; i > data.lenght; i++;) {
 var obj = data[i];
 var ad = obj.name;
 var vaka = obj.confirmedCount;
@@ -25,3 +22,20 @@ var heal = obj.recovryCount;
 }
 console.log("COVID-19 DB");
 </script>
+
+<script>
+var site="https://online.alicangonullu.xyz/corona/json.php?json=1";
+$(document).ready(function() {
+$.getJSON(site,function (gelen) {
+for(var i=0; i < gelen.length; i++){
+$.each(gelen[i], function (key,value) {
+document.write("<th>"+ name + "</th>");
+document.write("<th>"+ name + "</th>");
+});
+console.log("COVID-19 DB");
+}
+})
+});
+</script>
+</tr>
+</table>
