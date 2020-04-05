@@ -20,7 +20,7 @@ $.getJSON("https://corona.cbddo.gov.tr/Home/GetTotalDataWithLocationForMap").the
         var text = `Adı: ${data[i].name}<br>
                     Vaka: ${data[i].confirmedCount}<br>
                     Ölüm: ${data[i].deathCount}<br>
-                    İyileşme: ${data[i].deathCount}<br>`
+                    İyileşme: ${data[i].recovryCount}<br>`
         }
      
         $(".mypanel").html(text);
