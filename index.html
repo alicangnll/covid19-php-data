@@ -2,15 +2,21 @@
 <script>
 $(document).ready(function() {
 var data.getJSON('https://online.alicangonullu.xyz/corona/json.php?json=1');
-  for (var i = 0; i < data.report.length; i++) {
-    var tr = $('<tr/>');
-    
-    // Indexing into data.report for each td element
-    $(tr).append("<td>" + data.report[i].Mes + "</td>");
-    $(tr).append("<td>" + data.report[i].Dia + "</td>");
-    $(tr).append("<td>" + data.report[i].Local + "</td>");
+for (var i = 0; i < data.length; i++) {
+var tr = $('<tr/>');
+    $(tr).append("<td>" + data.id[i].name + "</td>");
+    $(tr).append("<td>" + data.id[i].confirmedCount + "</td>");
+    $(tr).append("<td>" + data.id[i].deathCount + "</td>");
+    $(tr).append("<td>" + data.id[i].recovryCount + "</td>");
     $('.table1').append(tr);
   }
 });
 </script>
-<div class="mypanel"></div>
+    <table class="table1">
+        <tr>
+            <th>Mes</th>
+            <th>Dia</th>
+            <th>Hora</th>
+           <th>Hora</th>
+        </tr>
+    </table>
