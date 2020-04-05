@@ -2,10 +2,11 @@
 <script>
 async function fetchDataAsync() {
 var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
-$.getJSON(staticUrl, function(data) {
+$.getJSON(staticUrl, $('#get-data').click(function(data) {
   console.log("COVID-19 DB");
   console.log(data);
 });
 }
 fetchDataAsync();
 </script>
+<a href="#" id="get-data">JSON Verileri</a>
