@@ -1,16 +1,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
 async function fetchDataAsync() {
-const response = await fetch('https://online.alicangonullu.xyz/corona/json.php?json=1');
-console.log(await response.json())
+var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
+$.getJSON(staticUrl, function(data) {
+  console.log("COVID-19 DB");
+  console.log(data);
+});
 }
 fetchDataAsync();
 </script>
-    <table class="table1">
-        <tr>
-            <th>Mes</th>
-            <th>Dia</th>
-            <th>Hora</th>
-           <th>Hora</th>
-        </tr>
-    </table>
