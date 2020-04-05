@@ -12,10 +12,10 @@ var site="https://online.alicangonullu.xyz/corona/json.php?json=1";
 $(document).ready(function () {
 $.getJSON(site,function (data) {
 for(var i=0; i < data.length; i++){
-document.write("<th>"+ data[i].name + "</th>");
-document.write("<th>"+ data[i].confirmedCount + "</th>");
-document.write("<th>"+ data[i].deathCount + "</th>");
-document.write("<th>"+ data[i].recovryCount + "</th>");
+document.write("<td>"+ data[i].name + "</td>");
+document.write("<td>"+ data[i].confirmedCount + "</td>");
+document.write("<td>"+ data[i].deathCount + "</td>");
+document.write("<td>"+ data[i].recovryCount + "</td>");
 }
 })
 });
