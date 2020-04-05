@@ -1,7 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
 async function fetchDataAsync() {
-var staticUrl = 'https://corona.cbddo.gov.tr/Home/GetTotalDataWithLocationForMap';
+var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
 $.getJSON(staticUrl, function(data) {
 for(var i = 0; i < data.length; i++) {
 var obj = data[i];
