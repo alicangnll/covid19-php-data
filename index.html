@@ -1,20 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
-$.getJSON("https://corona.cbddo.gov.tr/Home/GetTotalDataWithLocationForMap").then(function(data)
-{console.log(data);
-
-   var tr = data
-    for (var i = 0; i < data.report.length; i++) {
-    var tr = $('<tr/>');
-    tr.append("<td>" + data[i].name + "</td>");
-    tr.append("<td>" + data[i].confirmedCount + "</td>");
-    tr.append("<td>" + data[i].deathCount + "</td>");
-    tr.append("<td>" + data[i].recovryCount + "</td>");
-    $('.table1').append(tr);
-    }
-
-});
-   
        $.getJSON('https://online.alicangonullu.xyz/corona/json.php?json=1', function(data) {
         for (var i = 0; i < data.report.length; i++) {
         var text = `Adı: ${data[i].name}<br>
