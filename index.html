@@ -1,4 +1,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<table style="width:100%">
+  <tr>
+    <th>Ülke</th>
+    <th>Vaka</th> 
+    <th>Ölüm</th>
+    <th>İyileşme</th>
+  </tr>
+  <tr>
+    <td id="name"></td>
+    <td id="case"></td>
+    <td id="death"></td>
+    <td id="recovery"></td>
+  </tr>
+</table>
 <script>
 async function fetchDataAsync() {
 var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
@@ -19,17 +33,3 @@ document.getElementById("recovery").innerHTML = obj.recovryCount;
 console.log("COVID-19 DB");
 fetchDataAsync();
 </script>
-<table style="width:100%">
-  <tr>
-    <th>Ülke</th>
-    <th>Vaka</th> 
-    <th>Ölüm</th>
-    <th>İyileşme</th>
-  </tr>
-  <tr>
-    <td id="name"></td>
-    <td id="case"></td>
-    <td id="death"></td>
-    <td id="recovery"></td>
-  </tr>
-</table>
