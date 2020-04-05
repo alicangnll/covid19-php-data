@@ -3,8 +3,11 @@
 async function fetchDataAsync() {
 var staticUrl = 'https://corona.cbddo.gov.tr/Home/GetTotalDataWithLocationForMap';
 $.getJSON(staticUrl, function(data) {
-  console.log("COVID-19 DB");
-  console.log(data);
+for(var i = 0; i < data.length; i++) {
+var obj = data[i];
+console.log("COVID-19 DB");
+console.log(obj.name);
+}
 });
 }
 fetchDataAsync();
