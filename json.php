@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 $json = intval($_GET["json"]);
 if(empty($json)) {
   die("<head>
