@@ -14,22 +14,17 @@
   </tr>
 </table>
 <script>
-async function fetchDataAsync() {
+$(document).ready(function(){
 var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
 $.getJSON(staticUrl, function(data) {
 for(var i in data) {
 var obj = data[i];
-console.log("Ad:" + obj.name);
-console.log("Vaka:" + obj.confirmedCount);
-console.log("Ölüm:" + obj.deathCount);
-console.log("İyileşme:" + obj.recovryCount);
-document.getElementById("name").innerHTML = obj.name;
-document.getElementById("case").innerHTML = obj.confirmedCount;
-document.getElementById("death").innerHTML = obj.deathCount;
-document.getElementById("recovery").innerHTML = obj.recovryCount;
+var ad = obj.name;
+var vaka = obj.confirmedCount;
+var olum = obj.deathCount;
+var heal = obj.recovryCount;
 }
 });
 }
 console.log("COVID-19 DB");
-fetchDataAsync();
 </script>
