@@ -2,24 +2,24 @@
 <script>
 var site="https://online.alicangonullu.xyz/corona/json.php?json=1";
 $(document).ready(function () {
-document.write("<table style='width:100%'><tr><th>Ülke</th><th>Vaka</th> <th>Ölüm</th><th>İyileşme</th></tr><tr>");
 $.getJSON(site,function (data) {
 for(var i=0; i < data.length; i++){
-document.write("<td>");
-document.write(data[i].name);
-document.write("</td>");
-document.write("<td>");
-document.write(data[i].confirmedCount);
-document.write("</td>");
-document.write("<td>");
-document.write(data[i].deathCount);
-document.write("</td>");
-document.write("<td>");
-document.write(data[i].recovryCount);
-document.write("</td>");
+var tr = $('<tr/>');
+$(tr).append("<td>" + data[i].name + "</td>");
+$(tr).append("<td>" + data[i].confirmedCount + "</td>");
+$(tr).append("<td>" + data[i].deathCount + "</td>");
+$(tr).append("<td>" + data[i].recovryCount + "</td>");
+$('.table1').append(tr);
 }
 })
-document.write("</tr></table>");
 });
 </script>
+<table class="table1">
+  <tr>
+    <th>Ülke</th>
+    <th>Vaka</th>
+    <th>Ölüm</th>
+    <th>İyileşme</th>
+  </tr>
+</table>
 
