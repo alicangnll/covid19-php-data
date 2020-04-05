@@ -5,10 +5,15 @@ var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
 $.getJSON(staticUrl, function(data) {
 for(var i = 0; i < data.length; i++) {
 var obj = data[i];
-console.log("COVID-19 DB");
-console.log(obj.name);
+var text = `Ad: ${obj.name}<br>
+Vaka: ${obj.confirmedCount}<br>
+Ölüm: ${obj.deathCount}<br>
+İyileşme: ${obj.recovryCount}<br>`
+$(".mypanel").html(text);
 }
 });
 }
+console.log("COVID-19 DB");
 fetchDataAsync();
 </script>
+<div class="mypanel"></div>
