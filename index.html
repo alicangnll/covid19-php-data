@@ -17,7 +17,7 @@
 async function fetchDataAsync() {
 var staticUrl = 'https://online.alicangonullu.xyz/corona/json.php?json=1';
 $.getJSON(staticUrl, function(data) {
-for(var i = 0; i < data.length; i++) {
+for(var i = 0; i < 500; i++) {
 var obj = data[i];
 console.log("Ad:" + obj.name);
 console.log("Vaka:" + obj.confirmedCount);
