@@ -1,15 +1,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<table style="width:100%">
-  <tr>
-    <th>Ülke</th>
-    <th>Vaka</th> 
-    <th>Ölüm</th>
-    <th>İyileşme</th>
-  </tr>
-  <tr>
+
 <script>
 var site="https://online.alicangonullu.xyz/corona/json.php?json=1";
 $(document).ready(function () {
+document.write("<table style='width:100%'><tr><th>Ülke</th><th>Vaka</th> <th>Ölüm</th><th>İyileşme</th></tr><tr>");
 $.getJSON(site,function (data) {
 for(var i=0; i < data.length; i++){
 document.write("<td>"+ data[i].name + "</td>");
@@ -18,6 +12,7 @@ document.write("<td>"+ data[i].deathCount + "</td>");
 document.write("<td>"+ data[i].recovryCount + "</td>");
 }
 })
+document.write("</tr></table>");
 });
 </script>
-  </tr></table>
+
