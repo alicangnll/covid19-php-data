@@ -9,11 +9,27 @@ console.log("Ad:" + obj.name);
 console.log("Vaka:" + obj.confirmedCount);
 console.log("Ölüm:" + obj.deathCount);
 console.log("İyileşme:" + obj.recovryCount);
-$(".mypanel").html(obj);
+document.getElementById("name").innerHTML = obj.name;
+document.getElementById("case").innerHTML = obj.confirmedCount;
+document.getElementById("death").innerHTML = obj.deathCount;
+document.getElementById("recovery").innerHTML = obj.recovryCount;
 }
 });
 }
 console.log("COVID-19 DB");
 fetchDataAsync();
 </script>
-<div class="mypanel"></div>
+<table style="width:100%">
+  <tr>
+    <th>Ülke</th>
+    <th>Vaka</th> 
+    <th>Ölüm</th>
+    <th>İyileşme</th>
+  </tr>
+  <tr>
+    <td id="name"></td>
+    <td id="case"></td>
+    <td id="death"></td>
+    <td id="recovery"></td>
+  </tr>
+</table>
